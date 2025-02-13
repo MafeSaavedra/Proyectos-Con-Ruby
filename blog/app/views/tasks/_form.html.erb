@@ -1,0 +1,25 @@
+<%= form_with model: @task, local: true do |form| %>
+  <p>
+    <%= form.label :title, "Título de la Tarea" %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :description, "Descripción" %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :due_date, "Fecha Límite" %><br>
+    <%= form.datetime_select :due_date %>
+  </p>
+
+  <p>
+    <%= form.label :completed, "¿Completada?" %>
+    <%= form.check_box :completed %>
+  </p>
+
+  <p>
+    <%= form.submit "Guardar Tarea" %>
+  </p>
+<% end %>
